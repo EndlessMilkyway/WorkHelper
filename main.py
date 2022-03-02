@@ -14,6 +14,8 @@ import tkinter as tk
 import tkinter.font
 from datetime import datetime
 import webbrowser
+import os
+
 
 # GUI 프로그램 뼈대 및 파일 생성 함수
 class WorkHelper(tk.Tk):
@@ -245,7 +247,7 @@ class WorkHelper(tk.Tk):
         examplePhoto.image = img
            
     def generateFile(self):
-        file1 = open(file='newsletter_'+ today_process +'_1.html', mode='w', encoding='UTF-8')
+        file1 = open(file='./outputs/newsletter_'+ today_process +'_1.html', mode='w', encoding='UTF-8')
         file1.write('''<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ko">
   <head>
@@ -648,7 +650,7 @@ class WorkHelper(tk.Tk):
 </html>''')
         file1.close()
         
-        file2 = open(file='newsletter_'+ today_process +'_2.html', mode='w', encoding='UTF-8')
+        file2 = open(file='./outputs/newsletter_'+ today_process +'_2.html', mode='w', encoding='UTF-8')
         file2.write('''<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ko">
   <head>
